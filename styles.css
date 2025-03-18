@@ -19,7 +19,7 @@ body {
     transition: width 0.1s ease;
 }
 
-header {
+/*header {
     background: linear-gradient(135deg, #003366, #00AEEF);
     color: #FFFFFF;
     padding: 20px 0;
@@ -27,7 +27,27 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+}*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #003366, #00AEEF);
 }
+
+header.scrolled {
+    background: linear-gradient(135deg, 
+                rgba(0, 51, 102, 0.2), 
+                rgba(0, 174, 239, 0.2)); /* Same colors but with transparency */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .logo {
     width: 120px;
@@ -528,5 +548,9 @@ footer a:hover {
 
     footer {
         padding: 15px;
+    
     }
 }
+    .footer-text{
+        color: #FFFFFF;
+    }

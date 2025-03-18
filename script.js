@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
+        const header = document.querySelector('header'); // Select your header element
+    if (scrollPosition > 50) { // Adjust this threshold as needed
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
         // Progress Bar
         const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
         progressBar.style.width = `${scrollPercent}%`;
