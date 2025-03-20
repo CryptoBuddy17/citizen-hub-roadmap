@@ -16,6 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById('progress-bar');
     const serviceItems = document.querySelectorAll('.service-item');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    const rolloutItems = document.querySelectorAll('.rollout-timeline .timeline-item');
+
+    // Gallery Navigation
+    const galleryContainer = document.querySelector('.gallery-container');
+    const prevButton = document.querySelector('.gallery-prev');
+    const nextButton = document.querySelector('.gallery-next');
+
+    if (galleryContainer && prevButton && nextButton) {
+        const scrollAmount = 315; // Width of .gallery-item (300px) + margin-right (15px)
+
+        prevButton.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
 
     function checkScroll() {
         const scrollPosition = window.scrollY;
@@ -62,11 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Gallery Items
+        // Gallery Items (no longer needed for size change, but kept for potential future use)
         galleryItems.forEach(item => {
             const itemTop = item.getBoundingClientRect().top;
             if (itemTop < windowHeight * 0.8) {
                 item.classList.add('active');
+            }
+        });
+
+        // Rollout Timeline Items
+        rolloutItems.forEach((item, index) => {
+            const itemTop = item.getBoundingClientRect().top;
+            if (itemTop < windowHeight * 0.8) {
+                setTimeout(() => {
+                    item.classList.add('active');
+                }, index * 200); // Staggered animation: 200ms delay between each item
             }
         });
     }
