@@ -16,19 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById('progress-bar');
     const serviceItems = document.querySelectorAll('.service-item');
     const galleryItems = document.querySelectorAll('.gallery-item');
-    const engagementCards = document.querySelectorAll('.engagement-card');
 
     function checkScroll() {
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
-        const header = document.querySelector('header'); // Select your header element
-    if (scrollPosition > 50) { // Adjust this threshold as needed
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+        const header = document.querySelector('header');
+        if (scrollPosition > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     
         // Progress Bar
         const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
@@ -68,16 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const itemTop = item.getBoundingClientRect().top;
             if (itemTop < windowHeight * 0.8) {
                 item.classList.add('active');
-            }
-        });
-
-        // Engagement Cards
-        engagementCards.forEach((card, index) => {
-            const cardTop = card.getBoundingClientRect().top;
-            if (cardTop < windowHeight * 0.8) {
-                setTimeout(() => {
-                    card.classList.add('active');
-                }, index * 100);
             }
         });
     }
