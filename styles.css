@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 0;
     height: 5px;
-    background: #4fba9d;
+    background: #dac440;
     z-index: 20;
     transition: width 0.1s ease;
 }
@@ -91,12 +91,44 @@ header.scrolled {
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
+
 .social-links a:hover {
     color: #FFFFFF;
     background: rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
 }
 
+/* sociial links botttom of page */
+.social-links-bottom {
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.social-links-bottom a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+.social-links-bottom a:hover {
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.social-links-bottom{
+    padding-left: 75px;
+}
 /* Hero Section */
 #hero {
     position: relative;
@@ -545,7 +577,7 @@ footer a:hover {
     }
 
     #hero h1 {
-        margin: 100px auto 0;
+        margin: 200px auto 0;
         padding: 10px 15px;
         font-size: 1.8rem;
     }
@@ -553,6 +585,7 @@ footer a:hover {
     .video-container {
         width: 90%;
         padding: 15px;
+        
     }
 
     /* Scroll Pair Sections */
@@ -565,6 +598,7 @@ footer a:hover {
     .pair-content {
         flex: 1 1 100%;
         min-width: 100%;
+        
     }
 
     #engagement .pair-content {
@@ -575,18 +609,21 @@ footer a:hover {
         margin-left: 0; /* Reset for mobile to ensure proper centering */
     }
 
+    
     .pair-content p {
         font-size: 1rem;
+        margin: 20px;
     }
 
     .pair-content ul {
-        margin: 5px 0;
+        margin: 20px 0;
     }
 
     .pair-content li {
         padding-left: 15px;
         margin-bottom: 5px;
         font-size: 0.9rem;
+        margin: 20px;
     }
 
     /* Services Section */
@@ -657,6 +694,9 @@ footer a:hover {
         font-size: 0.8rem;
     }
 
+    .social-links-bottom{
+        padding-left: 60px;
+    }
     /* Footer */
     footer {
         padding: 15px;
