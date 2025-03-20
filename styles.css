@@ -39,14 +39,14 @@ header {
 
 .header-transparent {
     background: linear-gradient(135deg, rgb(255, 255, 255), rgba(253, 253, 253, 0.3));
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(0.7px);
+    -webkit-backdrop-filter: blur(0.7px);
 }
 
 header.scrolled {
     background: linear-gradient(135deg, rgb(255, 255, 255), rgba(235, 237, 238, 0.1));
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.603);
     padding: 15px 0;
 }
@@ -64,11 +64,6 @@ header.scrolled {
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 .social-links {
@@ -102,7 +97,8 @@ header.scrolled {
     display: flex;
     gap: 10px;
     margin-top: 2px;
-    padding-left: 75px;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-links-bottom a {
@@ -206,8 +202,8 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 20px auto;
-    padding: 40px 0;
+    margin: 30px auto;
+    padding: 40px 0px;
     background: #2D2D2D;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -494,7 +490,6 @@ header.scrolled {
 /* Footer */
 footer {
     padding: 20px;
-    background: linear-gradient(135deg, #ffffff, #ffffff);
     color: #3F2A56;
 }
 
@@ -508,7 +503,7 @@ footer a:hover {
 }
 
 .footer-text {
-    color: #4c669d;
+    color: #ffffff;
 }
 
 /* Timeline Section (Impact) */
@@ -587,13 +582,6 @@ footer a:hover {
     .logo {
         width: 100px;
         height: 100px;
-    }
-
-    .social-links a,
-    .social-links-bottom a {
-        width: 36px;
-        height: 36px;
-        font-size: 1.3rem;
     }
 
     /* Hero Section */
@@ -696,25 +684,6 @@ footer a:hover {
         padding: 10px 0;
     }
 
-    .social-links,
-    .social-links-bottom {
-        margin-top: 10px;
-        gap: 8px;
-    }
-
-    .social-links a,
-    .social-links-bottom a {
-        width: 32px;
-        height: 32px;
-        font-size: 1.2rem;
-        text-decoration: none;
-    }
-
-    .social-links-bottom {
-        text-align: center;
-        padding: 0;
-    }
-
     /* Hero Section */
     #hero {
         padding: 40px 0;
@@ -741,7 +710,7 @@ footer a:hover {
     .pair-image,
     .pair-content {
         flex: 1 1 100%;
-        min-width: 100%;
+        min-width: 90%;
     }
 
     #engagement .pair-content,
@@ -869,10 +838,6 @@ footer a:hover {
 
     .timeline-content p {
         font-size: 0.8rem;
-    }
-
-    .social-links-bottom {
-        padding-left: 80px;
     }
 
     /* Footer */
