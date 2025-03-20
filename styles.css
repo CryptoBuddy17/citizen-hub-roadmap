@@ -574,12 +574,14 @@ footer a:hover {
     /* Hero Section */
     #hero {
         padding: 40px 0;
+        margin-top: 10px;
     }
 
     #hero h1 {
         margin: 200px auto 0;
         padding: 10px 15px;
         font-size: 1.8rem;
+        margin-top: 150px;
     }
 
     .video-container {
